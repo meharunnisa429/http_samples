@@ -1,9 +1,6 @@
 import 'dart:convert';
-import 'dart:developer';
-
 import 'package:http/http.dart' as http;
-import 'package:http_samples/number_fact_response/number_fact_response.dart';
-
+import 'package:http_samples/models/number_fact_response/number_fact_response.dart';
 Future<NumberFactResponse> getNumberFact({required String number}) async {
   final _reponse =
       await http.get(Uri.parse('http://numbersapi.com/$number?json'));
